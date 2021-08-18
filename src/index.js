@@ -57,10 +57,10 @@ function decode(expr) {
           substr = substr + '-'
         }
       }
-      result.push(substr)
+      result.push(MORSE_TABLE[substr])
     }
   }
-  return result.map((s) => (s === ' ' ? s : MORSE_TABLE[s])).join('')
+  return result.join('')
 }
 
 module.exports = {
